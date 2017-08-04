@@ -10,6 +10,7 @@ namespace FastMicroKernel\Components;
 
 
 use Psr\Container\ContainerInterface;
+use GuzzleHttp\Psr7\Response;
 
 interface ControllerInterface {
 
