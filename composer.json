@@ -1,5 +1,5 @@
 {
-    "name": "dunaev/fast-route-engine",
+    "name": "artyomderyavka/fast-micro-kernel",
     "type": "library",
     "require": {
         "http-interop/http-middleware": "^0.4.1",
@@ -13,6 +13,10 @@
         "symfony/config": "^3.3"
     },
     "authors": [
+        {
+            "name": "Artyom Deryavka",
+            "email": "artyom.deryavka@together.com"
+        },
         {
             "name": "Alexander Dunaev",
             "email": "alexander.dunaev@together.com"
