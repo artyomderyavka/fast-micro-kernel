@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use FastRoute\Dispatcher;
@@ -66,6 +66,11 @@ class Router
         );
     }
 
+    /**
+     * @param $routeInfo
+     * @param RequestInterface $request
+     * @return ResponseInterface
+     */
     protected function runController($routeInfo, RequestInterface $request) : ResponseInterface
     {
         $handler = $routeInfo[1];

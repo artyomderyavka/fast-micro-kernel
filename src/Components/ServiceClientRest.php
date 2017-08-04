@@ -8,7 +8,7 @@ use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class ServiceClientLocal implements ServiceClientInterface
+class ServiceClientRest implements ServiceClientInterface
 {
     protected $prefix;
 
@@ -25,6 +25,7 @@ class ServiceClientLocal implements ServiceClientInterface
      */
     public function makeRequest(RequestInterface $request): ResponseInterface
     {
-        return App::getRouter()->handle(new Request($request->getMethod(), $this->prefix . $request->getUri()->getPath()));
+        //@todo
+        exit("Rest client is not implemented yet. Please switch to local client");
     }
 }

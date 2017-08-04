@@ -5,7 +5,7 @@
  * Time: 17:29
  */
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use Psr\Http\Message\RequestInterface;

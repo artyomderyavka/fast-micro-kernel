@@ -1,33 +1,35 @@
 <?php
 
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use \GuzzleHttp\Psr7\Response;
-use \GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 
 class Controller implements ControllerInterface
 {
+    /**
+     * @return ContainerInterface
+     */
     public function getContainer() : ContainerInterface
     {
-        return Engine::getContainer();
+        return App::getContainer();
     }
 
-    public function buildJsonResponse($status, $responseDataObject)
+    /**
+     * @param int $status
+     * @param \StdClass $responseDataObject
+     * @return Response
+     */
+    public function buildJsonResponse(int $status, \StdClass $responseDataObject): Response
     {
         return new Response(
             $status,
             ['Content-Type' => 'application/json'],
             json_encode($responseDataObject)
         );
-    }
-
-    public function buildRequest(string $method, string $route): RequestInterface
-    {
-        return new Request($method, $route);
     }
 }

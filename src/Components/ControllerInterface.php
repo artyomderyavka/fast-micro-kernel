@@ -6,7 +6,7 @@
  */
 
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use Psr\Container\ContainerInterface;
@@ -17,4 +17,11 @@ interface ControllerInterface {
      * @return mixed
      */
     public function getContainer(): ContainerInterface;
+
+    /**
+     * @param int $status
+     * @param \StdClass $responseDataObject
+     * @return Response
+     */
+    public function buildJsonResponse(int $status, \StdClass $responseDataObject): Response;
 }

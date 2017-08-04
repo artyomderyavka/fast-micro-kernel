@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use FastRoute\RouteCollector;

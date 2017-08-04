@@ -1,17 +1,28 @@
 <?php
 
 
-namespace AdServer\Engine\Components;
+namespace FastMicroKernel\Components;
 
 
 use GuzzleHttp\Psr7\ServerRequest;
 use Psr\Container\ContainerInterface;
 
-class Engine
+class App
 {
+    /**
+     * @var Router
+     */
     protected static $router;
+
+    /**
+     * @var ContainerInterface
+     */
     protected static $container;
 
+    /**
+     * @param array $routesMap
+     * @param ContainerInterface $container
+     */
     public static function run(
         array $routesMap,
         ContainerInterface $container
@@ -27,11 +38,17 @@ class Engine
         \Http\Response\send($response);
     }
 
+    /**
+     * @return Router
+     */
     public static function getRouter() : Router
     {
         return self::$router;
     }
 
+    /**
+     * @return ContainerInterface
+     */
     public static function getContainer() : ContainerInterface
     {
         return self::$container;
