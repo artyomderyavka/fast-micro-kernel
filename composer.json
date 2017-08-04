@@ -24,7 +24,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "AdServer\\Engine\\": "src"
+            "FastMicroKernel\\": "src"
         }
     },
     "classmap": [
