@@ -24,10 +24,10 @@
     ],
     "autoload": {
         "psr-4": {
-            "FastMicroKernel\\Components\\": "src"
+            "FastMicroKernel\\Components\\": "src/Components"
         }
     },
     "classmap": [
-        "src"
+        "src/Components"
     ]
 }
